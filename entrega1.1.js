@@ -44,7 +44,7 @@ console.log(arrFuncions);
 
 //NIVELL 3 EXERCICI 2
 
-(function( param1 ){
+const nom = (function( param1 ){
     console.log( param1 ); //Pere
 })( 'Pere' );
 
