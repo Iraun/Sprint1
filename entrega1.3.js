@@ -56,7 +56,7 @@ let salaries = [{
     salary: 2000
 }];
 
-const getEmplyee = (numId) => {
+/*const getEmplyee = (numId) => {
     return new Promise ((resolve, reject) => {
         const buscarIndex = (employees.findIndex( worker => worker.id === numId )) ; 
         console.log(buscarIndex);
@@ -67,12 +67,36 @@ const getEmplyee = (numId) => {
             resolve(employees[buscarIndex].name)
             
         } else if (buscarIndex < 0 ){
-            reject(/*new Error*/("no s'ha trobat l'id que busques"));
+            reject(//new Error//("no s'ha trobat l'id que busques"));
         }
     })
 }
 
 getEmplyee(1) 
+.then( resolve => {
+    console.log(resolve)
+})
+.catch( err => {
+    console.log(err)
+}); */
+
+
+const getSalary = (numId) => {
+    return new Promise ((resolve, reject) => {
+        const buscarIndex = (employees.findIndex( worker => worker.id === numId )) ; 
+        //const buscarSalari = (salaries.findIndex(x => x[buscarIndex] === salaries[buscarIndex].id))
+        console.log(buscarIndex);
+        //console.log(buscarSalari);
+        if (buscarIndex >= 0 && buscarIndex <= 3){
+            resolve(salaries[buscarIndex].salary)
+            
+        } else if (buscarIndex < 0 ){
+            reject(/*new Error*/("no s'ha trobat l'id que busques"));
+        }
+    })
+}
+
+getSalary(6) 
 .then( resolve => {
     console.log(resolve)
 })
