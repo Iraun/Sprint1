@@ -56,7 +56,7 @@ let salaries = [{
     salary: 2000
 }];
 
-/*const getEmplyee = (numId) => {
+const getEmplyee = (numId) => {
     return new Promise ((resolve, reject) => {
         const buscarIndex = (employees.findIndex( worker => worker.id === numId )) ; 
         console.log(buscarIndex);
@@ -67,7 +67,7 @@ let salaries = [{
             resolve(employees[buscarIndex].name)
             
         } else if (buscarIndex < 0 ){
-            reject(//new Error//("no s'ha trobat l'id que busques"));
+            reject(/*new Error*/("no s'ha trobat l'id que busques"));
         }
     })
 }
@@ -78,7 +78,10 @@ getEmplyee(1)
 })
 .catch( err => {
     console.log(err)
-}); */
+}); 
+
+
+//Nivell 2 Exercici 2
 
 
 const getSalary = (numId) => {
@@ -96,10 +99,29 @@ const getSalary = (numId) => {
     })
 }
 
-getSalary(6) 
+getSalary(1) 
 .then( resolve => {
     console.log(resolve)
 })
 .catch( err => {
     console.log(err)
 });
+
+
+//Nivell 2 Exercici 3
+
+
+let id = 1
+
+getEmplyee(id)
+.then( resolve => {
+    getSalary(id)
+    .then (resolve1 => {
+        console.log(resolve, resolve1)
+    } )
+} )
+
+
+//Nivell 3 Exercici 3
+
+
