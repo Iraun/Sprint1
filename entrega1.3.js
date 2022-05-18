@@ -1,6 +1,6 @@
 //Nivell 1 Execici 1
 
-/*const min = 90;
+const min = 90;
 
 const partit = new Promise ((resolve, reject) => {
     if( min > 80 ){
@@ -30,7 +30,7 @@ const dameArgo = ( num1, callback) => {
 }
  dameArgo(9, x => {
     console.log(x)
- })*/
+ })
 
  //Nivell 2 Exercici 1
 
@@ -124,4 +124,16 @@ getEmplyee(id)
 
 //Nivell 3 Exercici 3
 
+let id2 = 6
+
+getEmplyee(id2)
+.then( resolve => {
+    getSalary(id2)
+    .then (resolve1 => {
+        console.log(resolve, resolve1)
+    } )
+} )
+.catch ( err => {
+    console.log(err)
+});
 
