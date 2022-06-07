@@ -1,23 +1,26 @@
-//Nivell 1 Execici 1
+//Nivell 1 Execici 1 (CORREGIT)
+function n1e1(){ 
+    const min = 90;
 
-const min = 90;
+    const partit = new Promise ((resolve, reject) => {
+        if( min > 80 ){
+            const tempsPartit = `El partit està a punt d'acabar`
+            resolve (tempsPartit)
+        } else {
+            reject( new Error(`Encara poden passar moltes coses abans d'acabar el partit`))
+        }
+    })
 
-const partit = new Promise ((resolve, reject) => {
-    if( min > 80 ){
-        const tempsPartit = `El partit està a punt d'acabar`
-        resolve (tempsPartit)
-    } else {
-        reject( new Error(`Encara poden passar moltes coses abans d'acabar el partit`))
-    }
-})
+    partit 
+    .then( res => {
+        console.log(res)
+    } )
+    .catch( err => {
+        console.log(err)
+    });
+}
 
-partit 
-.then( res => {
-    console.log(res)
-} )
-.catch( err => {
-    console.log(err)
-});
+n1e1()
 
 //Nivell 1 Exercici 2
 
