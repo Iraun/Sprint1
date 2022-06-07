@@ -50,31 +50,41 @@ n1e3()*/
 
 //Nivell 2 Exercici 1
 
-/*function n2e1(num) {
-    console.log(num);
+//AQUEST NO ERA INFINIT
+// function n2e1(num) {
+//     console.log(num);
 
-    let nextNumber = num - 1;
+//     let nextNumber = num - 1;
 
-    if (nextNumber > 0) {
-        setTimeout(() => {
-            n2e1(nextNumber);
-          }, 1000)        
-    }
+//     if (nextNumber > 0) {
+//         setTimeout(() => {
+//             n2e1(nextNumber);
+//           }, 1000)        
+//     }
+// }
+// n2e1(10);
+
+function n2e1() {
+    let frase = 'Que passa penya';
+    setInterval(()  => {
+        console.log(frase);
+    }, 1000)
 }
-n2e1(10);*/
+
+n2e1()
 
 
 //Nivell 2 Exercici 2
 
-const ShowFiles = () => {
-    const { exec } = require('child_process');
-    const fs = require('fs');
-    exec ('ls', () => {
-      const homedir = require('os').homedir();
-      let file = fs.readdirSync(homedir);
-      console.log("Arxius Directori Usuari:", '\n', file);
-    })
+// const ShowFiles = () => {
+//     const { exec } = require('child_process');
+//     const fs = require('fs');
+//     exec ('ls', () => {
+//       const homedir = require('os').homedir();
+//       let file = fs.readdirSync(homedir);
+//       console.log("Arxius Directori Usuari:", '\n', file);
+//     })
   
-  }
+//   }
 
-  ShowFiles()
+//   ShowFiles()
